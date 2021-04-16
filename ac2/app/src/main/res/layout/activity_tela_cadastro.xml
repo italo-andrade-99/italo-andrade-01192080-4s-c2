@@ -4,32 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaCadastro">
+    tools:context=".TelaCadastro"
+    android:id="@+id/fundo">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Cadastrar um cachorro"
+        android:text="@string/botao_cadastrar"
         android:textSize="25sp"
+        android:id="@+id/titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/titulo"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_raca"
-            android:text="Raça:"
+            android:text="@string/raca"
             android:textSize="20sp"
             />
 
@@ -43,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/tv_preco"
-            android:text="Preço médio:"
+            android:text="@string/preco_medio"
             android:textSize="20sp"
             />
 
@@ -64,18 +67,25 @@
         <Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:id="@+id/sw_crianca"
             />
 
         <Button
+            android:id="@+id/bt_cadastrar"
             android:layout_width="300sp"
             android:layout_height="wrap_content"
-            android:id="@+id/bt_cadastrar"
-            android:text="cadastrar cachorro"
             android:onClick="cadastrar"
+            android:text="@string/botao_cadastrar" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cachorro_feliz"
+            android:id="@+id/iv_cachorro"
+            android:visibility="invisible"
             />
     </LinearLayout>
+
 
 
 

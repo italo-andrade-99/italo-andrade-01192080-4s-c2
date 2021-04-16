@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ItaloCachorrosApp</string>
+    <string name="botao_cadastrar">Cadastrar um cachorro</string>
+    <string name="raca">Raça:</string>
+    <string name="preco_medio">Preço médio:</string>
+    <string name="crianca_pode">Esse cachorro é para crianças?</string>
+    <string name="listar_cachorros">Listar os cachorros</string>
+    <string name="listar">listar</string>
+    <string name="indicados_crianca">Cachorros indicados para crianças:</string>
+    <string name="nao_indicados_crianca">Cachorros não indicados para crianças:</string>
+    <string name="total_cachorros">Total de Cachorros:</string>
 </resources>

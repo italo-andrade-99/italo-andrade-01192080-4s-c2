@@ -1,3 +1,3 @@
 package com.example.italocachorrosapp
 
-data class Cachorros(val raca:String, val preco:Int, val indicadoParaCrianca:Boolean)
+data class Cachorros(val raca:String, val precoMedio:Double, val indicadoCriancas:Boolean)

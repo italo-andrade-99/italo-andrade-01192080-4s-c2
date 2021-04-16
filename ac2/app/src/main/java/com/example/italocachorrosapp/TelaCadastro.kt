@@ -29,17 +29,19 @@ class TelaCadastro : AppCompatActivity() {
             Toast.makeText(this, "Preencha todos os campos!!", Toast.LENGTH_SHORT).show()
         }else{
             val nomeRaca:String = raca.text.toString();
-            val custoTotal:Int = valor.text.toString().toInt();
+            val custoTotal:Double = valor.text.toString().toDouble();
             val crianca:Boolean = indicadoParaCriancas.isChecked
 
-            val cachorro:Cachorros = Cachorros(nomeRaca,custoTotal,crianca)
+            val cachorro = Cachorros(nomeRaca,custoTotal,crianca)
 
             val apiCachorros = ConexaoCachorros.criar()
 
             apiCachorros.post(cachorro).enqueue(object : Callback<Cachorros>{
                 override fun onResponse(call: Call<Cachorros>, response: Response<Cachorros>) {
                     Log.println(Log.INFO, "merda",response.toString())
-                    Toast.makeText(this@TelaCadastro, "success", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@TelaCadastro, "Cachorro cadastrado com sucesso", Toast.LENGTH_SHORT).show()
+                    val cachorroFeliz:ImageView = findViewById(R.id.iv_cachorro)
+                    cachorroFeliz.visibility = View.VISIBLE;
                 }
 
                 override fun onFailure(call: Call<Cachorros>, t: Throwable) {

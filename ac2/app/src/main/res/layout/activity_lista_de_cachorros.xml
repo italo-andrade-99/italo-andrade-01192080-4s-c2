@@ -6,4 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".ListaDeCachorros">
 
+    <Button
+        android:id="@+id/bt_listar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="listarCachorros"
+        android:text="@string/listar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_cachorroIndicado1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/indicados_crianca"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/bt_listar"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_cachorroIndicado2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nao_indicados_crianca"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorroIndicado1"
+        />
+
+    <TextView
+        android:id="@+id/tv_totalCachorros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_cachorros"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cachorroIndicado2"
+        />
+
+
+    <ScrollView
+        android:id="@+id/schroll"
+        app:layout_constraintTop_toBottomOf="@id/tv_totalCachorros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
